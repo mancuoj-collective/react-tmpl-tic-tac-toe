@@ -111,11 +111,11 @@ export const useGameStore = create<GameStore>((set, get) => ({
       winningLine,
     })
 
-    if (gameMode === 'single' && !winner && !isDraw && currentPlayer === 'O') {
+    if (!winner && !isDraw && gameMode === 'single' && currentPlayer === 'X') {
       setTimeout(() => {
         const move = getAIMove(newBoard)
         get().makeMove(move)
-      }, 800)
+      }, 300)
     }
   },
 }))

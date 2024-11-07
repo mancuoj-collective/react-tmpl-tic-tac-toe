@@ -15,6 +15,7 @@
     "@remixicon/react": "latest",
     "class-variance-authority": "latest",
     "clsx": "latest",
+    "framer-motion": "latest",
     "jotai": "latest",
     "jotai-dark": "latest",
     "jotai-effect": "latest",
