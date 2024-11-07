@@ -1,0 +1,44 @@
+{
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "format": "prettier --cache --write ."
+  },
+  "dependencies": {
+    "@fontsource-variable/inter": "latest",
+    "@fontsource-variable/jetbrains-mono": "latest",
+    "@fontsource-variable/source-serif-4": "latest",
+    "@radix-ui/react-label": "latest",
+    "@radix-ui/react-slot": "latest",
+    "@radix-ui/react-tooltip": "latest",
+    "@remixicon/react": "latest",
+    "class-variance-authority": "latest",
+    "clsx": "latest",
+    "jotai": "latest",
+    "jotai-dark": "latest",
+    "jotai-effect": "latest",
+    "lucide-react": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "tailwind-merge": "latest",
+    "tailwindcss-animate": "latest",
+    "wouter": "latest",
+    "zustand": "latest"
+  },
+  "devDependencies": {
+    "@mancuoj/prettier-config": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "@vitejs/plugin-react-swc": "latest",
+    "autoprefixer": "latest",
+    "postcss": "latest",
+    "prettier": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest",
+    "vite": "latest"
+  },
+  "packageManager": "pnpm@9.12.2",
+  "prettier": "@mancuoj/prettier-config"
+}
