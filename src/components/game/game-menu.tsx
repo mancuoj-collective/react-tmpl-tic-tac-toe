@@ -8,12 +8,14 @@ export function GameMenu() {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={{ opacity: 0, scale: 0.8, y: 20 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.8, y: 20 }}
+      transition={{ duration: 0.2 }}
       className="flex flex-col items-center justify-center gap-10 pt-36"
     >
       <h1 className="text-4xl font-semibold font-serif">Tic Tac Toe</h1>
-      <div className="flex flex-col gap-3">
+      <div className="flex flex-col gap-2.5">
         <Button
           variant="outline"
           className="flex justify-start items-center gap-2 px-6"
