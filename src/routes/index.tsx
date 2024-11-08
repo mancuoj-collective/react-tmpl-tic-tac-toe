@@ -1,8 +1,7 @@
 import { Layout } from './layout'
 import { useGameStore } from '@/store/game-store'
 import { AnimatePresence, motion } from 'framer-motion'
-import { GameBoard, GameMenu, GameStatus } from '@/components/game'
-import { ButtonGroup } from '@/components/game/button-group'
+import { GameBoard, GameMenu, GameStatus, ButtonGroup } from '@/components/game'
 
 export function App() {
   const { gameStatus } = useGameStore()
