@@ -8,27 +8,25 @@ export function App() {
 
   return (
     <Layout>
-      <div className="w-full h-[28rem] border rounded-lg relative shadow z-10">
-        <div className="absolute top-2 right-2">
-          <ButtonGroup />
-        </div>
-        <AnimatePresence mode="wait">
-          {gameStatus === 'menu' ? (
-            <GameMenu />
-          ) : (
-            <motion.div
-              key="board"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.3 }}
-            >
-              <GameBoard />
-              <GameStatus />
-            </motion.div>
-          )}
-        </AnimatePresence>
+      <div className="absolute top-2 right-2">
+        <ButtonGroup />
       </div>
+      <AnimatePresence mode="wait">
+        {gameStatus === 'menu' ? (
+          <GameMenu />
+        ) : (
+          <motion.div
+            key="board"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.3 }}
+          >
+            <GameBoard />
+            <GameStatus />
+          </motion.div>
+        )}
+      </AnimatePresence>
     </Layout>
   )
 }

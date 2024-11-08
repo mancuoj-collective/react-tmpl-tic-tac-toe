@@ -59,12 +59,6 @@ export default {
           '5': 'hsl(var(--chart-5))',
         },
       },
-      keyframes: {
-        blink: {
-          '0%, 100%': { opacity: '0.6', scale: '1' },
-          '50%': { opacity: '1', scale: '1.02' },
-        },
-      },
     },
   },
   plugins: [tailwindcssAnimate],
