@@ -1,5 +1,6 @@
 {
   "type": "module",
+  "packageManager": "pnpm@9.14.4",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -9,9 +10,7 @@
     "@fontsource-variable/inter": "latest",
     "@fontsource-variable/jetbrains-mono": "latest",
     "@fontsource-variable/source-serif-4": "latest",
-    "@radix-ui/react-label": "latest",
     "@radix-ui/react-slot": "latest",
-    "@radix-ui/react-tooltip": "latest",
     "@remixicon/react": "latest",
     "class-variance-authority": "latest",
     "clsx": "latest",
@@ -24,7 +23,6 @@
     "react-dom": "latest",
     "tailwind-merge": "latest",
     "tailwindcss-animate": "latest",
-    "wouter": "latest",
     "zustand": "latest"
   },
   "devDependencies": {
@@ -40,6 +38,5 @@
     "typescript": "latest",
     "vite": "latest"
   },
-  "packageManager": "pnpm@9.12.3",
   "prettier": "@mancuoj/prettier-config"
 }
