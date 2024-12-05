@@ -1,7 +1,6 @@
-import { Button } from '../ui/button'
-import { RiRefreshLine, RiHome2Line, RiGithubLine } from '@remixicon/react'
+import { useGameStore } from '@/lib/store'
 import { DarkModeToggle } from '../dark-mode-toggle'
-import { useGameStore } from '@/store/game-store'
+import { Button } from '../ui/button'
 
 export function ButtonGroup() {
   const { gameStatus, resetGame, returnToMenu } = useGameStore()
@@ -10,18 +9,22 @@ export function ButtonGroup() {
     <>
       {gameStatus === 'ended' && (
         <Button variant="ghost" size="icon" onClick={resetGame}>
-          <RiRefreshLine />
+          <span className="i-carbon-restart" />
         </Button>
       )}
       {gameStatus === 'menu' ? (
         <Button variant="ghost" size="icon" asChild>
-          <a href="https://github.com/mancuoj-collective/react-tmpl-tic-tac-toe" target="_blank" rel="noreferrer">
-            <RiGithubLine />
+          <a
+            href="https://github.com/mancuoj-collective/react-tmpl-tic-tac-toe"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <span className="i-carbon-logo-github" />
           </a>
         </Button>
       ) : (
         <Button variant="ghost" size="icon" onClick={returnToMenu}>
-          <RiHome2Line />
+          <span className="i-carbon-home" />
         </Button>
       )}
       <DarkModeToggle />

@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils'
-import { useGameStore } from '@/store/game-store'
+import { useGameStore } from '@/lib/store'
 import { motion } from 'framer-motion'
 
 export function GameBoard() {

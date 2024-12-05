@@ -1,14 +1,19 @@
 import { useDark } from '@/hooks/use-dark'
 import { Button } from './ui/button'
-import { RiMoonLine, RiSunLine } from '@remixicon/react'
 
-export function DarkModeToggle() {
+export function DarkModeToggle({ className }: { className?: string }) {
   const { toggleDark } = useDark()
 
   return (
-    <Button aria-label="toggle dark mode" size="icon" variant="ghost" onClick={toggleDark}>
-      <RiSunLine className="sun scale-100 dark:scale-0 transition-transform duration-500 rotate-0 dark:-rotate-90" />
-      <RiMoonLine className="moon absolute scale-0 dark:scale-100 transition-transform duration-500 rotate-90 dark:rotate-0" />
+    <Button
+      aria-label="toggle dark mode"
+      size="icon"
+      variant="ghost"
+      onClick={toggleDark}
+      className={className}
+    >
+      <span className="sun i-carbon-sun rotate-0 scale-100 transition-transform duration-500 dark:-rotate-90 dark:scale-0" />
+      <span className="moon i-carbon-moon absolute rotate-90 scale-0 transition-transform duration-500 dark:rotate-0 dark:scale-100" />
     </Button>
   )
 }

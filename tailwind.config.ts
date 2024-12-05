@@ -1,6 +1,8 @@
 import type { Config } from 'tailwindcss'
 import defaultTheme from 'tailwindcss/defaultTheme'
 import tailwindcssAnimate from 'tailwindcss-animate'
+import tailwindScrollbar from 'tailwind-scrollbar'
+import { iconsPlugin, getIconCollections } from '@egoist/tailwindcss-icons'
 
 export default {
   darkMode: ['class'],
@@ -10,7 +12,6 @@ export default {
       fontFamily: {
         sans: ['"Inter Variable"', ...defaultTheme.fontFamily.sans],
         serif: ['"Source Serif 4 Variable"', ...defaultTheme.fontFamily.serif],
-        mono: ['"JetBrains Mono Variable"', ...defaultTheme.fontFamily.mono],
       },
       borderRadius: {
         lg: 'var(--radius)',
@@ -61,5 +62,15 @@ export default {
       },
     },
   },
-  plugins: [tailwindcssAnimate],
+  plugins: [
+    tailwindcssAnimate,
+    tailwindScrollbar({
+      nocompatible: true,
+      preferredStrategy: 'pseudoelements',
+    }),
+    iconsPlugin({
+      collections: getIconCollections(['carbon']),
+      scale: 1.2,
+    }),
+  ],
 } satisfies Config

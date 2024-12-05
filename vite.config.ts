@@ -1,12 +1,14 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react-swc'
-import { fileURLToPath } from 'node:url'
+import autoprefixer from 'autoprefixer'
+import tailwindcss from 'tailwindcss'
+import tsconfigPaths from 'vite-tsconfig-paths'
 
 export default defineConfig({
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': fileURLToPath(new URL('src', import.meta.url)),
+  css: {
+    postcss: {
+      plugins: [autoprefixer(), tailwindcss()],
     },
   },
+  plugins: [react(), tsconfigPaths()],
 })

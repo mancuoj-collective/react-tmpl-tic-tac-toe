@@ -1,14 +1,14 @@
-import { Layout } from './layout'
-import { useGameStore } from '@/store/game-store'
+import { useGameStore } from '@/lib/store'
 import { AnimatePresence, motion } from 'framer-motion'
 import { GameBoard, GameMenu, GameStatus, ButtonGroup } from '@/components/game'
+import { AppProvider } from './provider'
 
 export function App() {
   const { gameStatus } = useGameStore()
 
   return (
-    <Layout>
-      <div className="absolute top-2 right-2">
+    <AppProvider>
+      <div className="absolute right-2 top-2">
         <ButtonGroup />
       </div>
       <AnimatePresence mode="wait">
@@ -27,6 +27,6 @@ export function App() {
           </motion.div>
         )}
       </AnimatePresence>
-    </Layout>
+    </AppProvider>
   )
 }

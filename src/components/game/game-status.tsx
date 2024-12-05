@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { useGameStore } from '@/store/game-store'
+import { useGameStore } from '@/lib/store'
 
 export function GameStatus() {
   const { currentPlayer, winner, gameMode } = useGameStore()
@@ -22,7 +22,8 @@ export function GameStatus() {
         )
       ) : (
         <>
-          Player <span className={winner === 'X' ? 'text-blue-500' : 'text-red-500'}>{winner}</span> Wins!
+          Player <span className={winner === 'X' ? 'text-blue-500' : 'text-red-500'}>{winner}</span>{' '}
+          Wins!
         </>
       )
     }
@@ -41,13 +42,21 @@ export function GameStatus() {
 
     return (
       <>
-        Player <span className={currentPlayer === 'X' ? 'text-blue-500' : 'text-red-500'}>{currentPlayer}</span>'s Turn
+        Player{' '}
+        <span className={currentPlayer === 'X' ? 'text-blue-500' : 'text-red-500'}>
+          {currentPlayer}
+        </span>
+        's Turn
       </>
     )
   }
 
   return (
-    <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} className="text-center mt-8">
+    <motion.div
+      initial={{ opacity: 0, y: -20 }}
+      animate={{ opacity: 1, y: 0 }}
+      className="mt-8 text-center"
+    >
       <h2 className="text-lg font-semibold">{getStatusText()}</h2>
     </motion.div>
   )
