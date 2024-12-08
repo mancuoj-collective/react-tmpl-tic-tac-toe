@@ -4,21 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <!-- TODO: remove umami if not needed -->
-    <script
-      defer
-      src="https://a.mancuoj.me/script.js"
-      data-website-id="c4058cb6-7401-4fa8-87a2-75e605078ca6"
-    ></script>
+    <script defer src="https://a.mancuoj.me/script.js" data-website-id="c4058cb6-7401-4fa8-87a2-75e605078ca6"></script>
     <script>
       !(function () {
         var e = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches,
           t = localStorage.getItem('use-dark') || '"system"'
-        ;('"dark"' === t || (e && '"light"' !== t)) &&
-          document.documentElement.classList.toggle('dark', !0)
+        ;('"dark"' === t || (e && '"light"' !== t)) && document.documentElement.classList.toggle('dark', !0)
       })()
     </script>
-    <title>React</title>
+    <title>Tic Tac Toe</title>
   </head>
   <body>
     <div id="root"></div>
